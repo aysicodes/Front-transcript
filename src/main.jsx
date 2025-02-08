@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css'; // Подключение Tailwind CSS
+import './index.css'; // Импорт глобальных стилей (включая Tailwind)
 import App from './App';
 
 const rootElement = document.getElementById('root');

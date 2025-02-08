@@ -2,24 +2,27 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Home from './pages/Home';
-import Profile from './pages/Profile'; // Импортируем компонент страницы профиля
+import Profile from './pages/Profile';
 
 function App() {
   return (
     <Router>
-      <Routes>
-        {/* Страница регистрации по умолчанию */}
-        <Route path="/" element={<Register />} />
+      <div className="relative min-h-screen bg-purple-200 flex items-center justify-center">
+        {/* Логотип в левом верхнем углу */}
+        <img
+          src="/Ala-too_International_University_Seal.png"
+          alt="Ala-Too Logo"
+          className="absolute top-4 left-4 w-12 h-12"
+        />
 
-        {/* Страница логина */}
-        <Route path="/login" element={<Login />} />
-
-        {/* Главная страница */}
-        <Route path="/home" element={<Home />} />
-
-        {/* Страница профиля */}
-        <Route path="/profile" element={<Profile />} />
-      </Routes>
+        {/* Основной контент с маршрутизацией */}
+        <Routes>
+          <Route path="/" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
+      </div>
     </Router>
   );
 }
