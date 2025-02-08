@@ -2,7 +2,6 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-
 function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -31,8 +30,13 @@ function Register() {
 
   return (
     <div className="register-container">
-      {/* Логотип в левом верхнем углу */}
-      <div className="logo">
+      {/* Логотип вверху */}
+      <div className="logo-container flex justify-center">
+        <img
+          src="/Ala-too_International_University_Seal.png"
+          alt="Ala-Too Logo"
+          className="w-24 h-24" // Вы можете изменить размер логотипа, например, на 96x96 (w-24 h-24)
+        />
       </div>
 
       <h2>Register</h2>

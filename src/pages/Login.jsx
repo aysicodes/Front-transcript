@@ -25,20 +25,34 @@ const Login = ({ onLogin }) => {
 
   return (
     <div className="login-container">
-      <h2>Login</h2>
-      <input type="email" 
-      placeholder="Enter your email" 
-      value={email} 
-      onChange={e => setEmail(e.target.value)} />
+      {/* Логотип вверху */}
+      <div className="logo-container flex justify-center">
+        <img
+          src="/Ala-too_International_University_Seal.png"
+          alt="Ala-Too Logo"
+          className="w-24 h-24" // Размер логотипа
+        />
+      </div>
 
-      <input type="password" 
-      placeholder=" Enter your password" 
-      value={password} 
-      onChange={e => setPassword(e.target.value)} />
+      <h2>Login</h2>
+      <input 
+        type="email" 
+        placeholder="Enter your email" 
+        value={email} 
+        onChange={e => setEmail(e.target.value)} 
+      />
+
+      <input 
+        type="password" 
+        placeholder="Enter your password" 
+        value={password} 
+        onChange={e => setPassword(e.target.value)} 
+      />
       
       <button onClick={handleLogin} disabled={isLoading}>
         {isLoading ? "Signing In..." : "Sign In"}
       </button>
+      
       <p>
         Don’t have an account? <span onClick={() => navigate("/register")}>Register</span>
       </p>
